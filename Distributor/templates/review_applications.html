@@ -1,0 +1,29 @@
+<!-- review_applications.html -->
+<html>
+    <head>
+        <title>Review Applications</title>
+    </head>
+    <body>
+        <h1>Review Applications</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+            {% for application in applications %}
+            <tr>
+                <td>{{ application.name }}</td>
+                <td>{{ application.email }}</td>
+                <td>{{ application.verifiedForVote }}</td>
+                <td>{{ application.transAddress }}</td>
+                <td>
+                    <a href="{{ url_for('accept_application', app_id=application.email) }}">Accept</a>
+                    <a href="{{ url_for('reject_application', app_id=application.email) }}">Reject</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('send_to_users') }}">Start Voting</a>
+    </body>
+</html>

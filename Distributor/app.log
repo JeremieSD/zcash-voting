@@ -1,0 +1,3 @@
+werkzeug - WARNING -  * Debugger is active!
+werkzeug - INFO -  * Debugger PIN: 391-704-479
+werkzeug - INFO - 127.0.0.1 - - [14/Mar/2023 21:40:03] "[31m[1mPOST /send_transparent_address HTTP/1.1[0m" 401 -
